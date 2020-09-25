@@ -1,2 +1,4 @@
 praw.ini
 token
+db.json
+postedurls.json

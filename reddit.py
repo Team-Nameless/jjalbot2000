@@ -24,7 +24,8 @@ class scrapper:
         tmp = {}
 
         for submission in subreddit.hot(limit= lmt):
-            tmp[submission.url] = [submission.title, submission.permalink ]
+            if submission.url.startswith('https://i.redd.it'):
+                tmp[submission.url] = [submission.title, submission.permalink ]
         
         self.storage[sub] = tmp
         
